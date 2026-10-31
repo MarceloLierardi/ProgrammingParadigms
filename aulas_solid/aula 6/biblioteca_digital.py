@@ -84,18 +84,18 @@ class EmprestimoService:
 		self.notificador.enviar(material.mensagem_confirmacao())
 
 
-if __name__ == "__main__":
-	repositorio = EmprestimoRepository()
 
-	EmprestimoService(EmailService(), repositorio).emprestar(
-		Livro("Python para Iniciantes", "Autor A"), "Maria"
-	)
-	EmprestimoService(SMSService(), repositorio).emprestar(
-		Revista("Tecnologia Hoje", "Editora B"), "João"
-	)
-	EmprestimoService(EmailService(), repositorio).emprestar(
-		Ebook("Aprendendo POO", "Autor C"), "Ana"
-	)
-	EmprestimoService(SMSService(), repositorio).emprestar(
-		Audiobook("Clean Code em Áudio", "Autor D"), "Carlos"
-	)
+repositorio = EmprestimoRepository()
+
+EmprestimoService(EmailService(), repositorio).emprestar(
+	Livro("Python para Iniciantes", "Autor A"), "Maria"
+)
+EmprestimoService(SMSService(), repositorio).emprestar(
+	Revista("Tecnologia Hoje", "Editora B"), "João"
+)
+EmprestimoService(EmailService(), repositorio).emprestar(
+	Ebook("Aprendendo POO", "Autor C"), "Ana"
+)
+EmprestimoService(SMSService(), repositorio).emprestar(
+	Audiobook("Clean Code em Áudio", "Autor D"), "Carlos"
+)

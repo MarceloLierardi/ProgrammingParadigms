@@ -52,20 +52,19 @@ class DocumentoSomenteLeitura(Abrivel):
 		print(f"Abrindo {self.nome}")
 
 
-if __name__ == "__main__":
-	documentos = [
-		DocumentoPDF("arquivo.pdf"),
-		DocumentoWord("trabalho.docx"),
-		DocumentoSomenteLeitura("contrato_protegido.pdf"),
-	]
+documentos = [
+	DocumentoPDF("arquivo.pdf"),
+	DocumentoWord("trabalho.docx"),
+	DocumentoSomenteLeitura("contrato_protegido.pdf"),
+]
 
-	for documento in documentos:
-		documento.abrir()
+for documento in documentos:
+	documento.abrir()
 
-	for documento in documentos:
-		if isinstance(documento, Editavel):
-			documento.editar()
+for documento in documentos:
+	if isinstance(documento, Editavel):
+		documento.editar()
 
-	for documento in documentos:
-		if isinstance(documento, Imprimivel):
-			documento.imprimir()
+for documento in documentos:
+	if isinstance(documento, Imprimivel):
+		documento.imprimir()

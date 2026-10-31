@@ -52,16 +52,14 @@ class PedidoService:
 		self.pagamento.pagar(valor)
 		self.notificador.enviar("Pedido finalizado com sucesso!")
 
+pedido1 = PedidoService(Pix(), EmailService())
+pedido1.finalizar(150)
 
-if __name__ == "__main__":
-	pedido1 = PedidoService(Pix(), EmailService())
-	pedido1.finalizar(150)
+pedido2 = PedidoService(Cartao(), SMSService())
+pedido2.finalizar(300)
 
-	pedido2 = PedidoService(Cartao(), SMSService())
-	pedido2.finalizar(300)
+pedido3 = PedidoService(Boleto(), EmailService())
+pedido3.finalizar(80)
 
-	pedido3 = PedidoService(Boleto(), EmailService())
-	pedido3.finalizar(80)
-
-	pedido4 = PedidoService(PayPal(), SMSService())
-	pedido4.finalizar(200)
+pedido4 = PedidoService(PayPal(), SMSService())
+pedido4.finalizar(200)

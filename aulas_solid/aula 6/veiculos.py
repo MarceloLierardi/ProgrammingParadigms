@@ -42,15 +42,13 @@ class CarroEletrico(VeiculoEletrico):
 	def carregar(self):
 		print("Carro elétrico carregando bateria...")
 
+veiculos = [Carro(), Moto(), CarroEletrico()]
 
-if __name__ == "__main__":
-	veiculos = [Carro(), Moto(), CarroEletrico()]
+for veiculo in veiculos:
+	veiculo.mover()
 
-	for veiculo in veiculos:
-		veiculo.mover()
-
-	for veiculo in veiculos:
-		if isinstance(veiculo, VeiculoCombustivel):
-			veiculo.abastecer()
-		elif isinstance(veiculo, VeiculoEletrico):
-			veiculo.carregar()
+for veiculo in veiculos:
+	if isinstance(veiculo, VeiculoCombustivel):
+		veiculo.abastecer()
+	elif isinstance(veiculo, VeiculoEletrico):
+		veiculo.carregar()

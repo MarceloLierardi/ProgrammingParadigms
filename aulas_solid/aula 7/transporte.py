@@ -46,8 +46,6 @@ class CaminhaoCreator(TransporteCreator):
 	def criar_transporte(self) -> Transporte:
 		return Caminhao()
 
-
-if __name__ == "__main__":
-	MotoCreator().executar_entrega("Centro")
-	CarroCreator().executar_entrega("Zona Sul")
-	CaminhaoCreator().executar_entrega("Porto")
+MotoCreator().executar_entrega("Centro")
+CarroCreator().executar_entrega("Zona Sul")
+CaminhaoCreator().executar_entrega("Porto")

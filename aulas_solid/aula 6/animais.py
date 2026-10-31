@@ -22,8 +22,7 @@ class Vaca(Animal):
 		print(f"{self.nome}: Muuu!")
 
 
-if __name__ == "__main__":
-	animais = [Cachorro("Rex", 3), Gato("Mimi", 2), Vaca("Mimosa", 5)]
+animais = [Cachorro("Rex", 3), Gato("Mimi", 2), Vaca("Mimosa", 5)]
 
-	for animal in animais:
-		animal.emitir_som()
+for animal in animais:
+	animal.emitir_som()

@@ -44,14 +44,12 @@ class Aguia(Animal, Andador, Voador):
 	def voar(self):
 		print(f"{self.nome} está voando.")
 
+animais = [Cachorro("Rex"), Peixe("Nemo"), Aguia("Harpia")]
 
-if __name__ == "__main__":
-	animais = [Cachorro("Rex"), Peixe("Nemo"), Aguia("Harpia")]
-
-	for animal in animais:
-		if isinstance(animal, Andador):
-			animal.andar()
-		if isinstance(animal, Voador):
-			animal.voar()
-		if isinstance(animal, Nadador):
-			animal.nadar()
+for animal in animais:
+	if isinstance(animal, Andador):
+		animal.andar()
+	if isinstance(animal, Voador):
+		animal.voar()
+	if isinstance(animal, Nadador):
+		animal.nadar()

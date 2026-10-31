@@ -45,10 +45,8 @@ class FolhaPagamento:
 		for nome, calculo in self.funcionarios:
 			print(f"{nome}: R$ {calculo.calcular():.2f}")
 
-
-if __name__ == "__main__":
-	folha = FolhaPagamento()
-	folha.adicionar("Ana (CLT)", SalarioCLT(3000))
-	folha.adicionar("Bruno (Freelancer)", SalarioFreelancer(50, 80))
-	folha.adicionar("Carla (Comissionada)", SalarioComissionado(1500, 10000, 0.05))
-	folha.processar()
+folha = FolhaPagamento()
+folha.adicionar("Ana (CLT)", SalarioCLT(3000))
+folha.adicionar("Bruno (Freelancer)", SalarioFreelancer(50, 80))
+folha.adicionar("Carla (Comissionada)", SalarioComissionado(1500, 10000, 0.05))
+folha.processar()

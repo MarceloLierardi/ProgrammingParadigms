@@ -35,8 +35,6 @@ class VendaService:
 		print("Venda finalizada.")
 		self.notificador.enviar("Compra realizada.")
 
-
-if __name__ == "__main__":
-	for notificador in [EmailNotificador(), SMSNotificador(), PushNotificador(), TelegramNotificador()]:
-		venda = VendaService(notificador)
-		venda.finalizar_venda()
+for notificador in [EmailNotificador(), SMSNotificador(), PushNotificador(), TelegramNotificador()]:
+	venda = VendaService(notificador)
+	venda.finalizar_venda()

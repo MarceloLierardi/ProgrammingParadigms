@@ -57,8 +57,7 @@ class ClientesCreator(RelatorioCreator):
 		return RelatorioClientes()
 
 
-if __name__ == "__main__":
-	FinanceiroCreator().executar_relatorio("receitas e despesas")
-	EstoqueCreator().executar_relatorio("1200 itens")
-	VendasCreator().executar_relatorio("350 vendas")
-	ClientesCreator().executar_relatorio("80 clientes ativos")
+FinanceiroCreator().executar_relatorio("receitas e despesas")
+EstoqueCreator().executar_relatorio("1200 itens")
+VendasCreator().executar_relatorio("350 vendas")
+ClientesCreator().executar_relatorio("80 clientes ativos")

@@ -34,12 +34,10 @@ class ImpressoraMultifuncional(Imprimivel, Digitalizavel, Copiavel):
 	def copiar(self, documento):
 		print(f"Multifuncional copiando: {documento}")
 
+simples = ImpressoraSimples()
+simples.imprimir("Relatório.pdf")
 
-if __name__ == "__main__":
-	simples = ImpressoraSimples()
-	simples.imprimir("Relatório.pdf")
-
-	multifuncional = ImpressoraMultifuncional()
-	multifuncional.imprimir("Contrato.pdf")
-	multifuncional.digitalizar("Documento.pdf")
-	multifuncional.copiar("Documento.pdf")
+multifuncional = ImpressoraMultifuncional()
+multifuncional.imprimir("Contrato.pdf")
+multifuncional.digitalizar("Documento.pdf")
+multifuncional.copiar("Documento.pdf")

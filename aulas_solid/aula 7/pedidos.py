@@ -126,16 +126,14 @@ def montar_pedido(desconto):
 	pedido.adicionar_produto(Produto("Monitor", 900.0, 1))
 	return pedido
 
+descontos = [
+	("Comum", DescontoComum()),
+	("VIP", DescontoVIP()),
+	("Premium", DescontoPremium()),
+	("Especial 15%", DescontoEspecial()),
+]
 
-if __name__ == "__main__":
-	descontos = [
-		("Comum", DescontoComum()),
-		("VIP", DescontoVIP()),
-		("Premium", DescontoPremium()),
-		("Especial 15%", DescontoEspecial()),
-	]
-
-	for nome, desconto in descontos:
-		print(f"--- Desconto {nome} ---")
-		ProcessadorPedido(montar_pedido(desconto), ComprovanteSimplesCreator()).processar()
-		ProcessadorPedido(montar_pedido(desconto), ComprovanteDetalhadoCreator()).processar()
+for nome, desconto in descontos:
+	print(f"--- Desconto {nome} ---")
+	ProcessadorPedido(montar_pedido(desconto), ComprovanteSimplesCreator()).processar()
+	ProcessadorPedido(montar_pedido(desconto), ComprovanteDetalhadoCreator()).processar()

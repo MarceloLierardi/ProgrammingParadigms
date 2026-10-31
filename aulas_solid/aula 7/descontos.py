@@ -29,14 +29,12 @@ class Venda:
 	def calcular_valor_final(self, valor):
 		return self.desconto.aplicar(valor)
 
+estrategias = [
+	("Comum", DescontoComum()),
+	("VIP", DescontoVIP()),
+	("Premium", DescontoPremium()),
+]
 
-if __name__ == "__main__":
-	estrategias = [
-		("Comum", DescontoComum()),
-		("VIP", DescontoVIP()),
-		("Premium", DescontoPremium()),
-	]
-
-	for nome, estrategia in estrategias:
-		venda = Venda(estrategia)
-		print(f"{nome}: R$ {venda.calcular_valor_final(500):.2f}")
+for nome, estrategia in estrategias:
+	venda = Venda(estrategia)
+	print(f"{nome}: R$ {venda.calcular_valor_final(500):.2f}")

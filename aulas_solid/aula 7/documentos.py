@@ -36,7 +36,5 @@ class TXTCreator(DocumentoCreator):
 	def criar_documento(self) -> Documento:
 		return DocumentoTXT()
 
-
-if __name__ == "__main__":
-	PDFCreator().gerar_documento("Relatório mensal")
-	TXTCreator().gerar_documento("Anotações da reunião")
+PDFCreator().gerar_documento("Relatório mensal")
+TXTCreator().gerar_documento("Anotações da reunião")

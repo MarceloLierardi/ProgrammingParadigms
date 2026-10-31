@@ -32,13 +32,11 @@ class Checkout:
 	def pagar(self, valor):
 		self.pagamento.processar(valor)
 
+checkout = Checkout(Pix())
+checkout.pagar(100)
 
-if __name__ == "__main__":
-	checkout = Checkout(Pix())
-	checkout.pagar(100)
+checkout.trocar_pagamento(CartaoCredito())
+checkout.pagar(250)
 
-	checkout.trocar_pagamento(CartaoCredito())
-	checkout.pagar(250)
-
-	checkout.trocar_pagamento(Boleto())
-	checkout.pagar(80)
+checkout.trocar_pagamento(Boleto())
+checkout.pagar(80)

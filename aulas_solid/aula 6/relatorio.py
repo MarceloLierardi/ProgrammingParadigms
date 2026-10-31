@@ -26,6 +26,5 @@ class RelatorioService:
 		self.repositorio.salvar("Relatório")
 
 
-if __name__ == "__main__":
-	RelatorioService(MySQLRepositorio()).gerar()
-	RelatorioService(PostgreSQLRepositorio()).gerar()
+RelatorioService(MySQLRepositorio()).gerar()
+RelatorioService(PostgreSQLRepositorio()).gerar()

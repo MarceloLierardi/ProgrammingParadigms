@@ -35,11 +35,10 @@ class ImpressoraMultifuncional(Imprimivel, Escaneavel, EnviaFax):
 		print("Enviando fax...")
 
 
-if __name__ == "__main__":
-	basica = ImpressoraBasica()
-	basica.imprimir()
+basica = ImpressoraBasica()
+basica.imprimir()
 
-	multifuncional = ImpressoraMultifuncional()
-	multifuncional.imprimir()
-	multifuncional.escanear()
-	multifuncional.enviar_fax()
+multifuncional = ImpressoraMultifuncional()
+multifuncional.imprimir()
+multifuncional.escanear()
+multifuncional.enviar_fax()

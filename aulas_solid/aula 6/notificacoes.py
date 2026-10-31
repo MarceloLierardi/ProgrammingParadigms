@@ -29,7 +29,5 @@ class PedidoService:
 	def finalizar_pedido(self):
 		self.notificador.enviar("Pedido realizado com sucesso!")
 
-
-if __name__ == "__main__":
-	for notificador in [EmailService(), SMSService(), WhatsAppService()]:
-		PedidoService(notificador).finalizar_pedido()
+for notificador in [EmailService(), SMSService(), WhatsAppService()]:
+	PedidoService(notificador).finalizar_pedido()

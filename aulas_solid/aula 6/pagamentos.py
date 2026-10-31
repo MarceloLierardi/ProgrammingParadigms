@@ -27,15 +27,14 @@ def finalizar_pagamento(pagamento, valor):
 	pagamento.pagar(valor)
 
 
-if __name__ == "__main__":
-	for pagamento in [Pagamento(), Pix(), Cartao(), Boleto()]:
-		finalizar_pagamento(pagamento, 100)
+for pagamento in [Pagamento(), Pix(), Cartao(), Boleto()]:
+	finalizar_pagamento(pagamento, 100)
 
-	print("1. Pix pode substituir Pagamento? Sim.")
-	print("2. Cartao pode substituir Pagamento? Sim.")
-	print("3. Violação do LSP? Não, todas respeitam o contrato pagar(valor).")
-	print("4. Uma classe que lança exceção em pagar() viola o LSP:")
-	try:
-		finalizar_pagamento(PagamentoQuebrado(), 100)
-	except Exception as erro:
-		print(f"   finalizar_pagamento quebrou: {erro}")
+print("1. Pix pode substituir Pagamento? Sim.")
+print("2. Cartao pode substituir Pagamento? Sim.")
+print("3. Violação do LSP? Não, todas respeitam o contrato pagar(valor).")
+print("4. Uma classe que lança exceção em pagar() viola o LSP:")
+try:
+	finalizar_pagamento(PagamentoQuebrado(), 100)
+except Exception as erro:
+	print(f"   finalizar_pagamento quebrou: {erro}")
